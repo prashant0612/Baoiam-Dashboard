@@ -1,18 +1,46 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
 }
-
+html,body{
+    overflow: hidden;
+}
 .container{
     display: flex;
 }
 .sidebar{
-    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 35px;
+    width: 15%;
     height: 100vh;
-    background-color: blue;
+    background-color: white;
+    border-right: 2px solid #cecccc;
+    position: fixed;
+}
+.sidebar .brand-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sidebar .sidebar-content{
+    font-size: 23px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-left: 28px;
+    color: rgb(94, 94, 94); 
+    cursor: pointer;
+}
+.sidebar-content div:hover{
+    font-weight: bold;
+    color: orangered;
 }
 .main-content{
-    width: 75%;
+    margin-left: 15%;
+    width: 85%;
     height: 100vh;
     background-color: gray;
 }
