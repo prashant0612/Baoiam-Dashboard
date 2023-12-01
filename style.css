@@ -92,3 +92,93 @@ html,body{
     background-color: greenyellow;
     overflow-y: scroll;
 }
+/* main */
+
+.btn-row button {
+    display: inline-block;
+    padding: 12px 50px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid rgb(223, 219, 219);
+    color: orangered;
+    background-color: #ffffff;
+    border-radius: 15px;
+    transition: background-color 0.3s, color 0.3s;
+    margin-right: 4rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-weight: bolder;
+  }
+  button:hover {
+    background-color: orangered;
+    color: #ffffff;
+  }
+  .btn-row{
+    display: flex;
+    margin: 1.5rem;
+  }
+main{
+    margin: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .custom-card {
+    width: 20rem;
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    border: 1px solid #ddd; 
+    border-radius: 1rem; 
+    overflow: hidden; 
+    background-color: #ededed;
+  }
+  .custom-card img {
+    width: 100%;
+    height: 130px;
+    border-bottom: 1px solid #ddd;
+  }
+  .custom-card .card-body {
+    padding: 20px;
+  }
+  .custom-card .card-text {
+    font-size: 14px;
+    color: #333;
+    padding: 10px;
+  }
+  .custom-card h4{
+    color: orangered;
+    padding: 7px;
+  }
+  .custom-card button{
+    display: inline-block;
+    padding: 12px 50px;
+    margin: 20px 0 0 18px;
+    cursor: pointer;
+    border: 1px solid rgb(223, 219, 219);
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: orangered;
+    border-radius: 23px;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+  }
+  .custom-progress {
+    width: 100%;
+    height: 12px;
+    background-color: #eee; 
+    border-radius: 10px; 
+    overflow: hidden; 
+  }
+  .custom-progress .progress-bar {
+    width: 60%; 
+    height: 100%;
+    text-align: center;
+    line-height: 25px;
+    background-color: orangered;
+  }
+  .cards{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
