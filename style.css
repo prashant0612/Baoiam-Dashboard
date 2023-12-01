@@ -69,9 +69,13 @@ html,body{
     display: flex;
     width: 100%;
     height:100px;
+    justify-content: space-around;
 }
 .navbar .nav-link .icon-bell{
     color: orangered;
+}
+.navbar .search-box{
+    width: 60%;
 }
 .navbar .search-box input{
     width: 100%;
