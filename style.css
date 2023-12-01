@@ -26,7 +26,7 @@ html,body{
     justify-content: center;
 }
 .sidebar .sidebar-content{
-    font-size: 23px;
+    font-size: 18px;
     display: flex;
     flex-direction: column;
     gap: 40px;
