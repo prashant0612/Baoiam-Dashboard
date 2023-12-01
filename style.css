@@ -14,7 +14,7 @@ html,body{
     flex-direction: column;
     gap: 50px;
     padding: 35px;
-    width: 15%;
+    width: 12%;
     height: 100vh;
     background-color: white;
     border-right: 2px solid #cecccc;
@@ -39,8 +39,8 @@ html,body{
     color: orangered;
 }
 .main-content{
-    margin-left: 15%;
-    width: 85%;
+    margin-left: 16.3%;
+    width: 100%;
     height: 100vh;
     background-color: gray;
 }
@@ -50,6 +50,11 @@ html,body{
     background-color: yellow;
 }
 .main-section{
+    height: 100vh;
+    flex-wrap: wrap;
+    padding: 20px;
+    scroll-behavior: auto;
     width: 100%;
     background-color: greenyellow;
+    overflow-y: scroll;
 }
