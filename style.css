@@ -27,6 +27,7 @@ html,body{
     cursor: pointer;
 }
 .sidebar .brand-img{
+    margin-top: 20px;
     justify-content: center;
 }
 .sidebar .sidebar-content{
