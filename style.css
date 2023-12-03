@@ -26,6 +26,11 @@ html,body{
     align-items: center;
     cursor: pointer;
 }
+#close{
+  text-align: end;
+  display: none;
+  padding-top: 20px;
+}
 .sidebar .brand-img{
     margin-top: 20px;
     justify-content: center;
@@ -52,9 +57,12 @@ html,body{
     color: orangered;
 }
 .main-content{
-    margin-left: 18%;
-    width: 100%;
-    height: 100vh;
+  margin-left: 18%;
+  width: 100%;
+  height: 100vh;
+  flex-wrap: wrap;
+  scroll-behavior: auto;
+  overflow-y: scroll;
 }
 .navbar{
     background: var(--light);
@@ -65,10 +73,19 @@ html,body{
     grid-gap: 28px;
     position: sticky;
     z-index: 10;
-    display: flex;
     width: 100%;
-    height:100px;
+    height:80px;
     justify-content: space-around;
+    border-bottom: 2px solid #cecccc;
+}
+
+.toggle-sidebar-btn {
+  font-size: 24px;
+  margin-right: 20px;
+  cursor: pointer;
+  background-color: orangered;
+  display: none;
+  
 }
 .navbar .nav-link .icon-bell{
     color: orangered;
@@ -85,14 +102,6 @@ html,body{
     padding: 14px 70px 14px 16px;
     box-shadow: 0 2px 5px rgba(56, 56, 56, 0.381);
     transition: all .3s ease;
-}
-.main-content{
-    height: 100vh;
-    flex-wrap: wrap;
-    padding: 20px;
-    scroll-behavior: auto;
-    width: 100%;
-    overflow-y: scroll;
 }
 /* main */
 
@@ -120,14 +129,13 @@ html,body{
     display: flex;
     margin: 1.5rem;
   }
-main{
+  main{
     margin: 2rem;
     display: flex;
     flex-wrap: wrap;
   }
   .custom-card {
     width: 20rem;
-    width: calc(33.33% - 20px);
     margin: 10px;
     border: 1px solid #ddd; 
     border-radius: 1rem; 
@@ -145,11 +153,12 @@ main{
   .custom-card .card-text {
     font-size: 14px;
     color: #333;
-    padding: 10px;
+    padding-top: 10px;
   }
   .custom-card h4{
     color: orangered;
-    padding: 7px;
+    padding-top: 7px;
+    padding-bottom: 7px;
   }
   .custom-card button{
     display: inline-block;
@@ -184,3 +193,122 @@ main{
     flex-wrap: wrap;
     justify-content: space-around;
   }
+  @media  screen and (max-width: 768px){
+  .sidebar{
+    display: none;
+    width: 100%;
+    z-index: 50;
+    height:100vh;
+    scroll-behavior: auto;
+    overflow-y: scroll;
+  }
+  .toggle-sidebar-btn{
+    display: block;
+  }
+  .main-content{
+    width: 100%;
+    margin-left: 0;
+  }
+  .nav-text {
+    display: none;
+  }
+  .content{
+    width: 100%;
+  }
+  .btn-row{
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 1rem;
+    margin: 0px;
+  }
+  .btn-row button{
+    margin-right: 0px;
+  }
+  .card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .custom-card button{
+    white-space: nowrap;
+    margin: 0;
+    margin-top: 10px;
+  }
+  .sidebar .brand-img{
+    margin-top: 0px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px){
+  .sidebar{
+    width: 24%;
+    padding: 10px;
+  }
+  .main-content{
+    margin-left: 24%;
+  }
+  .user{
+    padding-left: 10px;
+  }
+  .content{
+    width: 100%;
+  }
+  .btn-row{
+    width: 100%;
+  }
+  .btn-row button{
+    padding: 15px 8px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 820px) {
+  .sidebar{
+    display: none;
+    width: 100%;
+    z-index: 50;
+    height:100vh;
+  }
+  .sidebar .sidebar-content{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .toggle-sidebar-btn{
+    display: block;
+  }
+  .main-content{
+    width: 100%;
+    margin-left: 0;
+  }
+  .nav-text {
+    display: none;
+  }
+  .content{
+    width: 100%;
+  }
+  .btn-row{
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 88px;
+    padding: 1rem;
+    margin: 0px;
+  }
+  .btn-row button{
+    margin-right: 0px;
+  }
+  .card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .custom-card button{
+    white-space: nowrap;
+    margin: 0;
+    margin-top: 10px;
+  }
+  .sidebar .brand-img{
+    margin-top: 0px;
+  }
+}

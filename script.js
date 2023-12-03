@@ -1,3 +1,67 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const menuIcon = document.getElementById("menuIcon");
+  const sidebar = document.getElementById("sidebar");
+
+  function toggleSidebar() {
+      sidebar.style.display = sidebar.style.display === "none" ? "block" : "none";
+  }
+  menuIcon.addEventListener("click", toggleSidebar);
+});
+
+function closeSidebar() {
+  const sidebar = document.getElementById("sidebar");
+  const content = document.getElementById("content");
+
+  sidebar.style.display = "none";
+  content.style.width = "100%";
+  content.style.left = "0";
+}
+function toggleSidebar() {
+  const sidebar = document.getElementById("sidebar");
+  const closebtn = document.getElementById("close");
+  const sidebarWidth = 0; // Change this value to match your sidebar width
+
+
+  sidebar.style.display = sidebar.style.display === "none" ? "block" : "none";
+
+  if (sidebar.style.display === "none" && sidebar.style.left === '-250px') {
+    sidebar.style.left = '0';
+  } else {
+      closebtn.style.display = "block";
+      sidebar.style.left = `-${sidebarWidth}px`;
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //CONTENT FOR SIDEBAR
 window.onload = function() {
     document.getElementById('content1').style.display = 'block'; // Show content for Button 1 on page load
